@@ -158,21 +158,17 @@ namespace Paint
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (paint)
-            {
 
-                if (radioButton4.Checked == true)
-                {
-                    px = e.Location;
-                    g.DrawLine(erase, px, py);
-                    py = px;
-                }
-            }
             pictureBox1.Refresh();
             x = e.X;
             y = e.Y;
             Sx = e.X - cX;
             Sy = e.Y - cY;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
